@@ -1,0 +1,302 @@
+/* 
+THE INTERNATIONAL UNIVERSITY OF MANAGEMENT
+
+COMPUTER STUDIES III ASSIGNMENT 5
+
+STUDENT NAME: ROBSON K
+STUDENT NUMBER: ..........{NOT PUBLIC}
+
+
+*/
+/* ------------------- globals ----------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  box-sizing: content-box;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  width: 100vw;
+  height: 100%;
+
+  background: #e3e7e7;
+
+  display: flex;
+  flex-flow: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ------------- lander div ----------------*/
+.lander {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://skylinevisuals.co.za/wp-content/uploads/2018/08/1535032349000_1430449.jpg");
+  background-position: center;
+  background-size: cover;
+  background-origin: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+}
+/* ---------- navigation -------------- */
+.nav-bar {
+  z-index: 4;
+  position: fixed;
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  background: #e3e7e7;
+  border-bottom: 3.5px solid #2060e9;
+
+  justify-content: space-between;
+}
+/* logo */
+.logo-div {
+  background: #344;
+  margin-left: 3rem;
+}
+
+#logo {
+  max-width: 3rem;
+  cursor: pointer;
+}
+/* ----------- main navigation ---------- */
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-nav li {
+  list-style-type: none;
+  margin: 1rem 1.2rem;
+}
+.main-nav li:hover {
+  transform: scale(1.1);
+  transition: 0.3s transform linear;
+}
+
+.main-nav li a {
+  color: #121212;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*  -------------- main navigation call-out button ---------- */
+.buy-btn {
+  background: #2060e9;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+}
+.buy-btn .click {
+  color: #fff;
+}
+
+/* ------------------ about div ------------- */
+.about-div {
+  position: absolute;
+  bottom: 100px;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+}
+/*  ---------responsiveness on large devices ----------- */
+@media only screen and (min-width: 1400px) {
+  .about-div {
+    bottom: 20px;
+  }
+  .about-div .text {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+.about-div .text {
+  width: 100%;
+  word-wrap: wrap;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+/*  ---------features div ------------ */
+.features {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-flow: column;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+.specs {
+  width: 85%;
+  margin: 0 auto;
+}
+.specs li {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 0.3rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+.specs .feature-title {
+  background: white;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  font-size: large;
+  font-weight: 700;
+}
+/*  --------------all h1 elements ------------- */
+.title {
+  align-self: center;
+  padding: 0;
+  margin: 95px 0 20px 0;
+  border-bottom: 2.5px solid #2060e9;
+  border-top: 2.5px solid #2060e9;
+  text-transform: capitalize;
+}
+/*  -----------h1 element in footer ---------- */
+.title-social {
+  align-self: center;
+  padding: 0;
+  margin: 33px 0;
+  text-transform: capitalize;
+}
+.specs .spec-title {
+  background: #c0bbbb;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  font-size: large;
+  font-weight: 700;
+}
+.specs li .feature {
+  background: white;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+  font-size: 12px;
+}
+.specs li .spec {
+  background: #c0bbbb;
+  width: 50%;
+  height: 100vh;
+  height: 100%;
+  padding: 1rem;
+  font-size: 12px;
+}
+
+/* -------------- how to container ----------- */
+.how-to-div {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 50px;
+}
+/*  -------------- price container ------------ */
+.price-div {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+/*  ---------- circle in price container ---------- */
+.circle {
+  width: 200px;
+  height: 200px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  border-radius: 50%;
+  background: #e0e0e0;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+}
+
+.circle .usd {
+  font-size: 44px;
+  padding: 0.2rem;
+}
+
+.circle .price {
+  padding: 3px 2px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2060e9;
+}
+/* ---------- call out button in price container -------- */
+.buy-now {
+  margin-top: 2rem;
+  padding: 0.5rem 0.9rem;
+  color: #e3e7e7;
+  background: #2060e9;
+  border: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s linear;
+}
+.buy-now a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.buy-now:hover {
+  background: #c0bbbb;
+  color: #121212;
+}
+
+/* ------------- footer -------- */
+.social {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.connect {
+  display: flex;
+}
+.connect li {
+  list-style-type: none;
+  margin: 0;
+}
+/* ---------------- footer icons/images ------- */
+.icons {
+  max-width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+  transition: 0.3s transform linear;
+}
+/* 
+--------------- END ---------------
+*/
