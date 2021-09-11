@@ -2,4 +2,4 @@
 
 **Product Landing Page**
 
-LIVE: [](https://kanhalelor.github.io/assignment-5/)
+LIVE: [GITHUB PAGES](https://kanhalelor.github.io/assignment-5/)
